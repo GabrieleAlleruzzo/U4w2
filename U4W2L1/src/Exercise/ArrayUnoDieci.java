@@ -19,8 +19,35 @@ public class ArrayUnoDieci {
 
     System.out.println(Arrays.toString(arrays)); //ho dovuto importare la classe Arrays
         Scanner scanner = new Scanner(System.in);
-        
 
+        int valore;
+
+        do {
+
+            valore=4;
+
+            try {
+
+                System.out.println("dammi un numeroski:");
+                valore = scanner.nextInt();
+
+                System.out.println("dammi un numero posizione:");
+                int indice = scanner.nextInt();
+
+                arrays[indice]=valore;
+            } catch (ArrayIndexOutOfBoundsException i) {
+                System.out.println("numero posizione invalido");
+            } catch (InputMismatchException o) {
+                System.out.println("numero posizione invalido");
+                scanner.nextLine(); //sto scanner che fa qua?
+            }
+
+            for (int i = 0; i < arrays.length; i++) {
+                System.out.println(arrays[i]);
+
+            }
+
+        } while(valore != 0);
 
 
     }
