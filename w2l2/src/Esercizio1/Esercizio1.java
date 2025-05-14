@@ -9,9 +9,10 @@ public class Esercizio1 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Dammi numero parole:");
-        s.nextLine();
+        //s.nextLine();
 
         int N = s.nextInt();
+        s.nextLine(); //da nextInt a nextLine lascia un carattere vuoto nel canale dello scanner
 
         //qui vanno le collezione di intefacce
         //ste è un'interfaccia
